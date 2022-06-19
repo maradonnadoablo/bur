@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+ul li{ list-style: none;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+.header__list {
+    display: flex;
+    font-size: 25px;
+
+}
+
+@media(max-width:768px){
+    .header__burger{
+        display: block;
+        position:relative; 
+        width:40px;
+        height: 30px;
+        margin:0px 20px 0px 0px;
+    }
+    .header__burger::before,.header__burger::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        z-index: 3;
+        
+    }
+    .header__burger::before{
+        top:0;
+    }
+    .header__burger::after{
+        bottom:0;
+    }
+    .header__burger span{
+        position: absolute;
+        z-index:3;
+        background-color: white;
+        position: absolute;
+        left:0;
+        top:14px;
+        width: 100%;
+        height: 2px;
+        
+    }
+    .header__menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color:blueviolet;
+        
+    }
+    .header:before{
+        z-index: 2;
+    }
+    .header__logo{
+        position: relative;
+        z-index:3 ;
+    }
+    .header__list{
+        display:block;
+        margin:20px 0px 0px 0px;
+        font-size: 30px;
+    }
+    .header__burger.active::before{
+        transform: rotate(45deg);
+    }
+}
+.wrapper {
+}
+
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left:0;
+    z-index: 40;
+    
+}
+.header:before{
+    content:'' ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#5e5373;
+    
+}
+.container {
+    max-width: 1080px;
+    margin:0 auto;
+    
+
+}
+.header__body { 
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+
+}
+.header__logo {
+    
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+.header__burger {
+    
+}
+.header__menu {
+    
+    
+}
+
+.header__link{
+    
+    text-decoration: none;
+    margin:0px 13px;
+    color: bisque;
+
+
+}
+
